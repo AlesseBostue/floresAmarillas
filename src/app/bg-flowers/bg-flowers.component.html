@@ -1,12 +1,23 @@
+<div class="sparkle-container">
+    <div *ngFor="let sparkle of sparkles"
+        class="sparkle"
+        [ngStyle]="{
+            '--top': sparkle.top,
+            '--left': sparkle.left,
+            '--delay': sparkle.delay
+        }">
+    </div>
+</div>
 <div class="flower-collage" >
     <img 
         *ngFor='let flower of flowers'
         [ngStyle]="{'top':flower.top, 'left': flower.left}"
         class="yflower"
-        src="https://images.vexels.com/media/users/3/185318/isolated/preview/3463339e4c90719310ded8dd95e64689-petalos-elipticos-de-flor-amarilla-planos.png" 
+        [src]="flower.url"
         alt="FloresAmarillas" 
         srcset=""
     >
+
 </div>
 
 <app-message></app-message>
