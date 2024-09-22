@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './message.component.css'
 })
 export class MessageComponent {
-  message = 'webiwabo :D';
+  message = 'Oña :D';
   displayedText = '';
   private index = 0;
 

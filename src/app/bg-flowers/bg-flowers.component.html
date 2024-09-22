@@ -20,5 +20,13 @@
 
 </div>
 
-<app-message></app-message>
-<app-button></app-button>
+<app-message
+    [ngStyle]="{
+        'transform': moveMessage ? 'translate(-150%, -50%)' : 'translate(-50%, -50%)',
+        'opacity': moveMessage ? 0 : 1,
+        'transition': 'transform 0.5s, opacity 0.5s'
+}">
+{{ moveMessage ? '' : 'Mensaje original' }}
+></app-message>
+<app-dedication [show]="showNewMessage"></app-dedication>
+<app-button (click)="onButtonClick()" ></app-button>

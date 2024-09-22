@@ -1,0 +1,25 @@
+.new-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    background: rgba(0, 0, 255, 0.25);
+    border-radius: 16px;
+    padding: 2rem;
+    opacity: 0; /* Oculto por defecto */
+}
+
+.shake {
+    animation: shake .5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% { transform: translatex(0); }
+    25% { transform: translatex(-5px); }
+    50% { transform: translatex(5px); }
+    75% { transform: translatex(-5px); }
+    100% { transform: translatex(0); }
+}

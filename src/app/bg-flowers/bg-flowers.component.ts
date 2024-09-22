@@ -2,17 +2,30 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MessageComponent } from "../message/message.component";
 import { ButtonComponent } from '../button/button.component';
+import { DedicationComponent } from '../dedication/dedication.component';
 
 @Component({
     selector: 'app-bg-flowers',
   standalone: true,
-  imports: [CommonModule, MessageComponent, ButtonComponent],
+  imports: [CommonModule, MessageComponent, ButtonComponent, DedicationComponent],
   templateUrl: './bg-flowers.component.html',
   styleUrl: './bg-flowers.component.css'
 })
 export class BgFlowersComponent {
-  // flowers = new Array(10).fill(null);
-  flowers: { url:String; top: string; left: string; }[] = [];
+    
+    moveMessage = false;
+    showNewMessage = false;
+
+    onButtonClick() {
+        this.moveMessage = true;  // Desplaza el mensaje
+        setTimeout(() => {
+            this.showNewMessage = true;  // Revela el nuevo mensaje
+        }, 500);  // Espera a que termine la animación de desplazamiento
+    }
+    
+
+    // flowers = new Array(10).fill(null);
+    flowers: { url:String; top: string; left: string; }[] = [];
 	sparkles: { top: number; left: number; delay: number }[] = [];
 	numImagenes = 12;
 
@@ -30,6 +43,7 @@ export class BgFlowersComponent {
 			'https://cdn-icons-png.flaticon.com/512/8696/8696403.png',
 			'https://i.imgur.com/xwF4WpM.png',
 			'https://i.imgur.com/UwiJSoK.png',
+            'https://i.imgur.com/qlClUvy.png'
 
 		]
 
