@@ -1,0 +1,33 @@
+/* animacion rotar para la imagen */
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(360deg);}
+}
+
+/* @keyframes move {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+} */
+
+@keyframes moveDown {
+    from { top: -10%; }
+    to { top: 100%; }
+}
+
+.flower-collage {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ajusta según lo necesites */
+    overflow: hidden; /* Evita que la página sea desplazable */
+  }
+  
+
+div .yflower {
+    opacity: .2;
+    width: 300px;
+    position: absolute;
+    height: auto;
+    animation: rotate 60s linear infinite; /* controla la velocidad de la animacion */
+}

@@ -1,0 +1,12 @@
+.center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    font-size: 2rem; /* Tamaño del texto, ajusta según lo desees */
+    text-align: center;
+}
+  
+p {
+    margin: 0;
+}
