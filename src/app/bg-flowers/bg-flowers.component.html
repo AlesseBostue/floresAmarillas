@@ -29,4 +29,5 @@
 {{ moveMessage ? '' : 'Mensaje original' }}
 ></app-message>
 <app-dedication [show]="showNewMessage"></app-dedication>
+<app-simfoni *ngIf="showImg"></app-simfoni>
 <app-button (click)="onButtonClick()" ></app-button>

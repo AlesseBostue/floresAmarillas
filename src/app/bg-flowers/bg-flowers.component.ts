@@ -3,25 +3,39 @@ import { CommonModule } from '@angular/common';
 import { MessageComponent } from "../message/message.component";
 import { ButtonComponent } from '../button/button.component';
 import { DedicationComponent } from '../dedication/dedication.component';
+import { SimfoniComponent } from '../simfoni/simfoni.component';
 
 @Component({
     selector: 'app-bg-flowers',
   standalone: true,
-  imports: [CommonModule, MessageComponent, ButtonComponent, DedicationComponent],
+  imports: [CommonModule, MessageComponent, ButtonComponent, DedicationComponent, SimfoniComponent],
   templateUrl: './bg-flowers.component.html',
   styleUrl: './bg-flowers.component.css'
 })
 export class BgFlowersComponent {
     
-    moveMessage = false;
-    showNewMessage = false;
-
+    moveMessage     = false;
+    showNewMessage  = false;
+    showImg         = false;
+    clickCount      = 0;
+    
     onButtonClick() {
-        this.moveMessage = true;  // Desplaza el mensaje
-        setTimeout(() => {
-            this.showNewMessage = true;  // Revela el nuevo mensaje
-        }, 500);  // Espera a que termine la animación de desplazamiento
-    }
+        this.clickCount++;
+    
+        if (this.clickCount === 1) {
+          this.moveMessage = true;  // Desplaza el mensaje
+          setTimeout(() => {
+            this.showNewMessage = true;  // Muestra el nuevo mensaje
+          }, 500);
+        } else if (this.clickCount === 2) {
+          this.showNewMessage = false;  // Oculta el nuevo mensaje
+          this.showImg = true;  // Muestra la imagen
+        } else if (this.clickCount === 3) {
+          this.showImg = false;  // Oculta la imagen
+          this.clickCount = 0;  // Reinicia el flujo
+          location.reload();  // Recarga la página (opcional)
+        }
+      }
     
 
     // flowers = new Array(10).fill(null);
