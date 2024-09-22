@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MessageComponent } from "../message/message.component";
 
 @Component({
   selector: 'app-bg-flowers',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MessageComponent],
   templateUrl: './bg-flowers.component.html',
   styleUrl: './bg-flowers.component.css'
 })

@@ -14,6 +14,17 @@
     to { top: 100%; }
 }
 
+app-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
 .flower-collage {
     display: flex;
     flex-wrap: wrap;
