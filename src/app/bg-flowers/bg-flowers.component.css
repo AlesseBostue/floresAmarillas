@@ -24,13 +24,24 @@ app-message {
     color: black;
     text-align: center;
     /* From https://css.glass */
-    background: rgba(237, 104, 14, 0.25);
+    background: rgba(17, 144, 59, 0.25);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.4px);
     -webkit-backdrop-filter: blur(8.4px);
     border: 1px solid rgba(237, 143, 14, 0.3);
     padding: 10rem;
+}
+
+app-button {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
 }
 
 .flower-collage {

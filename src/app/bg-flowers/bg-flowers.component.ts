@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MessageComponent } from "../message/message.component";
+import { ButtonComponent } from '../button/button.component';
 
 @Component({
-  selector: 'app-bg-flowers',
+    selector: 'app-bg-flowers',
   standalone: true,
-  imports: [CommonModule, MessageComponent],
+  imports: [CommonModule, MessageComponent, ButtonComponent],
   templateUrl: './bg-flowers.component.html',
   styleUrl: './bg-flowers.component.css'
 })
@@ -17,7 +18,7 @@ export class BgFlowersComponent {
 
   constructor() {
     this.genRandomPosition();
-		this.genSparkles(50); // Genera 50 brillitos
+		this.genSparkles(50); // brillitos :D
   }
 
 	/* metodos */
